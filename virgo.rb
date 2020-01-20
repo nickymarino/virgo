@@ -93,7 +93,7 @@ command :save do |c|
   c.option '--foregrounds FOREGROUNDS', String, 'Wallpaper foregrounds as hexcodes separated by commans. Use list-foregrounds to list predefined foreground names'
   c.option '--width PIXELS', Integer, 'Width of the wallpaper'
   c.option '--height PIXELS', Integer, 'Height of the wallpaper'
-  c.option '--density RATIO', Integer, 'Ratio of pixels to size of the image, as a percent integer'
+  c.option '--density RATIO', Float, 'Ratio of pixels to size of the image, as a percent integer'
   c.option '--diameter PIXELS', Integer, 'Diameter of each pixel drawn on the wallpaper'
   c.action do |args, options|
     # Default values for each option

@@ -4,6 +4,8 @@
 
 Virgo is a random wallpaper generator inspired by the galaxy [Virgo A](https://en.wikipedia.org/wiki/Messier_87), also known as the [Thousand-Ruby Galaxy](https://apod.nasa.gov/apod/ap151008.html).
 
+![Example image](examples/example_11.png)
+
 ## Quick Start
 
 To use Virgo, download this repo and run:
@@ -102,3 +104,15 @@ yellows: ["#e1f5c4", "#ede574", "#f9d423", "#fc913a"]
 earth: ["#e5fcc2", "#9de0ad", "#45ada8", "#547980"]
 faded: ["#fe4365", "#fc9d9a", "#f9cdad", "#c8c8a9"]
 ```
+
+## More Example Images
+
+![Example image](examples/example_1.png)
+
+![Example image](examples/example_8.png)
+
+![Example image](examples/example_14.png)
+
+![Example image](examples/example_15.png)
+
+![Example image](examples/example_21.png)

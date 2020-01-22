@@ -10,13 +10,48 @@ require_relative 'theme'
 def save_examples(folder)
   # Example arguments to create wallpapers (theme will be added later)
   args = [
-    { width: 20,  height: 20,  density: 0.5, pixel_diameter: 1 },
-    { width: 20,  height: 20,  density: 5, pixel_diameter: 1 },
-    { width: 20,  height: 20,  density: 10, pixel_diameter: 5 },
-    { width: 100,  height: 100,  density: 0.5, pixel_diameter: 1 },
-    { width: 100,  height: 100,  density: 10, pixel_diameter: 3 },
-    { width: 500,  height: 500,  density: 5, pixel_diameter: 1 },
-    { width: 828,  height: 1792,  density: 0.1, pixel_diameter: 5 }
+    # Small square sizes
+    { width: 400,  height: 400,  density: 0.7, pixel_diameter: 1 },
+    { width: 400,  height: 400,  density: 0.1, pixel_diameter: 10 },
+    { width: 400,  height: 400,  density: 0.5, pixel_diameter: 5 },
+    { width: 400,  height: 400,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 100, y_normal_mean: 100 },
+
+    # Medium square sizes
+    { width: 1000,  height: 1000,  density: 0.7, pixel_diameter: 1 },
+    { width: 1000,  height: 1000,  density: 0.1, pixel_diameter: 10 },
+    { width: 1000,  height: 1000,  density: 0.5, pixel_diameter: 5 },
+    { width: 1000,  height: 1000,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 500, y_normal_mean: 500 },
+    { width: 1000,  height: 1000,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 750, y_normal_mean: 750 },
+    { width: 1000,  height: 1000,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 333 },
+    { width: 1000,  height: 1000,  density: 0.5, pixel_diameter: 5,
+      y_normal_mean: 333 },
+
+    # 1920x1080 wallpaper sizes
+    { width: 1920,  height: 1080,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 960, y_normal_mean: 540 },
+    { width: 1920,  height: 1080,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 480, y_normal_mean: 270 },
+    { width: 1920,  height: 1080,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 333 },
+    { width: 1920,  height: 1080,  density: 0.5, pixel_diameter: 5,
+      y_normal_mean: 720 },
+
+    # iPhone 11 Pro Max wallpaper sizes
+    { width: 1125,  height: 2436,  density: 0.05, pixel_diameter: 1 },
+    { width: 1125,  height: 2436,  density: 0.1, pixel_diameter: 10 },
+    { width: 1125,  height: 2436,  density: 0.5, pixel_diameter: 5 },
+    { width: 1125,  height: 2436,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 563, y_normal_mean: 2030 },
+    { width: 1125,  height: 2436,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 563, y_normal_mean: 1624 },
+    { width: 1125,  height: 2436,  density: 0.5, pixel_diameter: 5,
+      x_normal_mean: 333 },
+    { width: 1125,  height: 2436,  density: 0.5, pixel_diameter: 5,
+      y_normal_mean: 2103 },
   ]
 
   # Add a random theme to each set of args and create the wallpapers

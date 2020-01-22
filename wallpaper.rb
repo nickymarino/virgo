@@ -139,3 +139,6 @@ class Wallpaper
     img
   end
 end
+
+t = Theme.from_syms(:black, :primaries)
+Wallpaper.new(width: 1125,  height: 2436,  density: 0.05, pixel_diameter: 1, theme: t).image.save('out.png')

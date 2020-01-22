@@ -69,9 +69,11 @@ class Theme
     Theme.new(BACKGROUNDS[background_sym], FOREGROUNDS[foreground_sym])
   end
 
-  # Returns a random predefined theme
+  # Returns a random theme from the predefined backgrounds and foregrounds
   def self.random_theme
-    THEMES[THEMES.keys.sample]
+    background = BACKGROUNDS[BACKGROUNDS.keys.sample]
+    foreground = FOREGROUNDS[FOREGROUNDS.keys.sample]
+    Theme.new(background, foreground)
   end
 
   # Predefined themes

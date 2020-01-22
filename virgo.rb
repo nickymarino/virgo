@@ -8,46 +8,6 @@ require_relative 'theme'
 
 # Saves examples of wallpapers to the folder
 def save_examples(folder)
-  # Create example themes to be chosen randomly for each wallpaper
-  themes = [
-    {
-      background: Theme::BACKGROUNDS[:black],
-      foregrounds: Theme::FOREGROUNDS[:ruby]
-    },
-    {
-      background: Theme::BACKGROUNDS[:dark_blue],
-      foregrounds: Theme::FOREGROUNDS[:sunset]
-    },
-    {
-      background: Theme::BACKGROUNDS[:chalkboard],
-      foregrounds: Theme::FOREGROUNDS[:primaries]
-    },
-    {
-      background: Theme::BACKGROUNDS[:peach],
-      foregrounds: Theme::FOREGROUNDS[:primaries_light]
-    },
-    {
-      background: Theme::BACKGROUNDS[:gray],
-      foregrounds: Theme::FOREGROUNDS[:gothic]
-    },
-    {
-      background: Theme::BACKGROUNDS[:teal],
-      foregrounds: Theme::FOREGROUNDS[:solar]
-    },
-    {
-      background: Theme::BACKGROUNDS[:orange],
-      foregrounds: Theme::FOREGROUNDS[:yellows]
-    },
-    {
-      background: Theme::BACKGROUNDS[:brown],
-      foregrounds: Theme::FOREGROUNDS[:earth]
-    },
-    {
-      background: Theme::BACKGROUNDS[:gray_green],
-      foregrounds: Theme::FOREGROUNDS[:faded]
-    }
-  ].map { |x| Theme.new(x[:background], x[:foregrounds]) }
-
   # Example arguments to create wallpapers (theme will be added later)
   args = [
     { width: 20,  height: 20,  density: 0.5, pixel_diameter: 1 },
@@ -61,7 +21,7 @@ def save_examples(folder)
 
   # Add a random theme to each set of args and create the wallpapers
   wallpapers = args.map do |arg_set|
-    arg_set[:theme] = themes.sample
+    arg_set[:theme] = Theme.random_theme
     Wallpaper.new(arg_set)
   end
 
@@ -73,7 +33,7 @@ def save_examples(folder)
   # Save each example to the folder
   wallpapers.each_with_index do |example, index|
     filename = "#{folder}/example_#{index}.png"
-    example.save(filename)
+    example.image.save(filename)
     puts "Wallpaper saved at #{filename}"
   end
 end
@@ -143,7 +103,7 @@ command :save do |c|
     wallpaper = Wallpaper.new(theme: theme, width: options.width,
                               height: options.height, density: options.density,
                               pixel_diameter: options.diameter)
-    wallpaper.save(path)
+    wallpaper.image.save(path)
     puts "Wallpaper saved at #{path}"
   end
 end

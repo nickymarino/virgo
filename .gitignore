@@ -1,5 +1,6 @@
-# Ignore vscode files
+# Ignore vscode files and extra macOS files
 .vscode/
+.DS_Store
 
 *.gem
 *.rbc

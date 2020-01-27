@@ -2,6 +2,9 @@
 .vscode/
 .DS_Store
 
+# Ignore generated wallpapers
+public/walls
+
 *.gem
 *.rbc
 /.config

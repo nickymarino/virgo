@@ -3,8 +3,8 @@
 
 require 'rubygems'
 require 'commander/import'
-require_relative 'wallpaper'
-require_relative 'theme'
+require_relative 'framework/wallpaper'
+require_relative 'framework/theme'
 
 # Saves examples of wallpapers to the folder
 def save_examples(folder)

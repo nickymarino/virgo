@@ -5,7 +5,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         // Send a POST to get a new wallpaper link
-        $.post('/gen-wallpaper?' + $('#wallpaper-form').serialize())
+        $.post('/wallpaper-link?' + $('#wallpaper-form').serialize())
             .done(function(data) {
                 // Create a downloadable link and click it in the background
                 $('body').append('<a href="' + data + '" id="wall-link" download></a>');

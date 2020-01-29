@@ -37,7 +37,8 @@ class Theme
     solar: ['#a7226e', '#ec2049', '#f26b38', '#9dedad'],
     yellows: ['#e1f5c4', '#ede574', '#f9d423', '#fc913a'],
     earth: ['#e5fcc2', '#9de0ad', '#45ada8', '#547980'],
-    faded: ['#fe4365', '#fc9d9a', '#f9cdad', '#c8c8a9']
+    faded: ['#fe4365', '#fc9d9a', '#f9cdad', '#c8c8a9'],
+    dark_violet: ['#9400d3']
   }.freeze
 
   # The background and the foregrounds for a Theme can be from the predefined
@@ -116,5 +117,15 @@ class Theme
   # Returns the key (in @color_hash) for a color value
   def key_from_color(color)
     @color_hash.key(color)
+  end
+
+  # Returns a hex code string representing the background color
+  def background_hex
+    ChunkyPNG::Color.to_hex(@background, include_alpha=false)
+  end
+
+  # Returns a hex code string representing the first foreground color
+  def first_foreground_hex
+    ChunkyPNG::Color.to_hex(@foregrounds[0], include_alpha=false)
   end
 end

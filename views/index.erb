@@ -1,20 +1,21 @@
 <form action="/" method="post" id="wallpaper-form">
   <div class="form-group row">
-    <label for="height" class="col-sm-2 col-form-label">Height</label>
-    <input type="text" id="height" name="height" class="form-control col-sm-6">
+    <label for="width" class="col-sm-2 col-form-label">Width</label>
+    <input type="text" id="width" name="width" class="form-control col-sm-6" value="<%= wallpaper.width %>">
   </div>
   <div class="form-group row">
-    <label for="width" class="col-sm-2 col-form-label">Width</label>
-    <input type="text" id="width" name="width" class="form-control col-sm-6">
+    <label for="height" class="col-sm-2 col-form-label">Height</label>
+    <input type="text" id="height" name="height" class="form-control col-sm-6" value="<%= wallpaper.height %>">
   </div>
   <div class="form-group row">
     <label for="background" class="col-sm-2 col-form-label">Background</label>
-    <input type="text" id="background" name="background" class="form-control col-sm-6">
+    <input type="text" id="background" name="background" class="form-control col-sm-6" value="<%= wallpaper.theme.background_hex %>">
   </div>
   <div class="form-group row foreground-row" id="foreground-row-1">
     <label for="foreground0" class="col-sm-2 col-form-label">Foreground</label>
-    <input type="text" id="foreground0" name="foreground0" class="form-control col-sm-6">
-    <button type="button" id="foreground-delete-0" class="btn btn-danger col-sm-1 foreground-delete-btn" onclick="deleteForegroundId(0)">Delete</button>
+    <input type="text" id="foreground0" name="foreground0" class="form-control col-sm-6" value="<%= wallpaper.theme.first_foreground_hex %>">
+    <!-- Use display: none on the delete button because we will only show it when there are multiple foreground rows -->
+    <button type="button" id="foreground-delete-0" class="btn btn-danger col-sm-1 foreground-delete-btn" onclick="deleteForegroundId(0)" style="display: none;">Delete</button>
   </div>
   <input type="button" value="+ Foreground" id="add-foreground-row"/>
   <input type="submit" value="Submit" />

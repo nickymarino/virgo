@@ -26,12 +26,16 @@ class Wallpaper
   # - y_normal_mean: Enables a normal distribution of the pixel y-coordinates
   #     The mean is the mean of the normal distribution. If nil, uses a uniform
   #     distribution.
+  # - create_map_now: If true, the image map is generated when the class is constructed.
+  #     When set to false, save time when constructing a wallpaper by calling
+  #     create_map()
   def initialize(args = {})
     args[:theme] ||= Theme.new
     args[:width] ||= 2048
     args[:height] ||= 2732
     args[:density] ||= 0.01 # percentage
     args[:pixel_diameter] ||= 3
+    args[:create_map_now] ||= true
 
     @theme = args[:theme]
     @width = args[:width]
@@ -44,8 +48,12 @@ class Wallpaper
     @y_distribution = dist_from_mean(args[:y_normal_mean], @height)
 
     # Generate a map (NArray of Integers) to represent the image
-    @map = create_map
+    @map = create_map if args[:create_map_now]
   end
+
+  attr_reader :height
+  attr_reader :width
+  attr_reader :theme
 
   # Initializes the (uniform or normal) distribution for
   # generating random pixel coordinates

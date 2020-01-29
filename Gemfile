@@ -16,3 +16,6 @@ gem "sinatra", "~> 2.0"
 
 gem "sinatra-contrib", "~> 2.0"
 
+gem "pry", "~> 0.12.2"
+
+gem "pry-remote", "~> 0.1.8"

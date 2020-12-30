@@ -2,7 +2,9 @@
 
 ## Description
 
-Virgo is a random wallpaper generator inspired by the galaxy [Virgo A](https://en.wikipedia.org/wiki/Messier_87), also known as the [Thousand-Ruby Galaxy](https://apod.nasa.gov/apod/ap151008.html).
+Virgo is a Ruby CLI that generates beatiful random wallpapers.
+
+This project was inspired by the galaxy [Virgo A](https://en.wikipedia.org/wiki/Messier_87), also known as the [Thousand-Ruby Galaxy](https://apod.nasa.gov/apod/ap151008.html).
 
 ![Example image](examples/example_11.png)
 
@@ -26,10 +28,10 @@ To save a wallpaper to `PATH`:
 Options:
 ```
     --background BACKGROUND
-        Wallpaper background as a hexcode. Use list-backgrounds to list predefined background names
+        Wallpaper background as a hexcode. Use list_backgrounds to list predefined background names
 
     --foregrounds FOREGROUNDS
-        Wallpaper foregrounds as hexcodes separated by commans. Use list-foregrounds to list predefined f
+        Wallpaper foregrounds as hexcodes separated by commas. Use list_foregrounds to list predefined foreground names
 
     --width PIXELS
         Width of the wallpaper
@@ -38,7 +40,7 @@ Options:
         Height of the wallpaper
 
     --density RATIO
-        Ratio of pixels to size of the image, as a percent integer
+        Ratio of pixels to size of the image, as an integer percentage
 
     --diameter PIXELS
         Diameter of each pixel drawn on the wallpaper

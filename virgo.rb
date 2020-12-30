@@ -84,11 +84,11 @@ command :save do |c|
   c.example 'Save a random wallpaper with default options', './virgo.rb save'
   c.example 'Save a wallpaper with a white background and black pixels', './virgo.rb save --background "#ffffff" --foregrounds "#000000"'
   c.example 'Save a wallpaper with predefined theme names as test.png', './virgo.rb save --background dark_blue --foreground sunset --width 100 --height 100 --density 2 --diameter 1 --path test.png'
-  c.option '--background BACKGROUND', String, 'Wallpaper background as a hexcode. Use list-backgrounds to list predefined background names'
-  c.option '--foregrounds FOREGROUNDS', String, 'Wallpaper foregrounds as hexcodes separated by commans. Use list-foregrounds to list predefined foreground names'
+  c.option '--background BACKGROUND', String, 'Wallpaper background as a hexcode. Use list_backgrounds to list predefined background names'
+  c.option '--foregrounds FOREGROUNDS', String, 'Wallpaper foregrounds as hexcodes separated by commas. Use list_foregrounds to list predefined foreground names'
   c.option '--width PIXELS', Integer, 'Width of the wallpaper'
   c.option '--height PIXELS', Integer, 'Height of the wallpaper'
-  c.option '--density RATIO', Float, 'Ratio of pixels to size of the image, as a percent integer'
+  c.option '--density RATIO', Float, 'Ratio of pixels to size of the image, as an integer percentage'
   c.option '--diameter PIXELS', Integer, 'Diameter of each pixel drawn on the wallpaper'
   c.action do |args, options|
     # Default values for each option

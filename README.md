@@ -10,7 +10,7 @@
 
 Virgo is a CLI written in Ruby to generate background art. Virgo takes a number of configuration options detailed below.
 
-In progress and future steps are detailed below in [**Future Steps**](#future-steps)
+In progress and future steps are detailed below in the section [**Future Steps**](#future-steps).
 
 This project was inspired by the galaxy [Virgo A](https://en.wikipedia.org/wiki/Messier_87), also known as the [Thousand-Ruby Galaxy](https://apod.nasa.gov/apod/ap151008.html).
 

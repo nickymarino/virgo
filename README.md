@@ -1,31 +1,54 @@
 # Virgo Wallpaper Generator
 
-## Description
+> A Ruby CLI that generates beatiful random wallpapers.
 
-Virgo is a Ruby CLI that generates beatiful random wallpapers.
-
-This project was inspired by the galaxy [Virgo A](https://en.wikipedia.org/wiki/Messier_87), also known as the [Thousand-Ruby Galaxy](https://apod.nasa.gov/apod/ap151008.html).
+**Now 30x faster! I wrote out my optimization process [in this article](https://nickymarino.com/2020/01/21/optimizing-virgo/).**
 
 ![Example image](examples/example_11.png)
 
+## Introduction
+
+Virgo is a CLI written in Ruby to generate background art. Virgo takes a number of configuration options detailed below.
+
+In progress and future steps are detailed below in [**Future Steps**](#future-steps)
+
+This project was inspired by the galaxy [Virgo A](https://en.wikipedia.org/wiki/Messier_87), also known as the [Thousand-Ruby Galaxy](https://apod.nasa.gov/apod/ap151008.html).
+
+## Installation
+
+First, install Ruby on your machine by following [these steps](https://phoenixnap.com/kb/install-ruby-on-windows-10).
+
+Then, clone this repo:
+
+```
+git clone https://github.com/nickymarino/virgo.git
+```
+
 ## Quick Start
 
-To use Virgo, download this repo and run:
+ To use Virgo, download this repo and run this command to create a wallpaper with the default settings saved to `output.png`:
 
 ```bash
 ./virgo.rb save output.png
 ```
 
-to generate a wallpaper saved as `output.png`.
+## Future Steps
 
-## Save a Wallpaper
+- [ ] Add a web view to call the CLI (in progress!)
+- [ ] Publish this repo as a publicly available gem
+- [ ] Add more shapes outside of square pixels
 
-To save a wallpaper to `PATH`:
+## Commands
+
+### Save one Wallpaper
+
+To save a wallpaper to `PATH`, use this command:
 ```
 ./virgo.rb save PATH [options]
 ```
 
 Options:
+
 ```
     --background BACKGROUND
         Wallpaper background as a hexcode. Use list_backgrounds to list predefined background names
@@ -59,7 +82,7 @@ Examples:
 ./virgo.rb save --background dark_blue --foreground sunset --width 100 --height 100 --density 2 --diameter 1 --path test.png
 ```
 
-## Save Examples
+### Save Example Wallpapers
 
 To write examples of wallpapers to `FOLDER`:
 
@@ -69,7 +92,7 @@ To write examples of wallpapers to `FOLDER`:
 
 Examples can also be found in the [examples](https://github.com/nickymarino/virgo/tree/master/examples) folder.
 
-## List Background Names
+### List Background Names
 
 To list all predefined background names and their hex codes:
 
@@ -88,7 +111,7 @@ brown: #594f4f
 gray_green: #83af9b
 ```
 
-## List Foreground Names
+### List Foreground Names
 
 To list all predefined foreground names and their hex codes:
 
